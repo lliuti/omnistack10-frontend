@@ -24,14 +24,14 @@ function DevForm({ onSubmit }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    
+
     await onSubmit({
       github_username,
       techs,
       latitude,
       longitude
     });
-
+    
     setGithubUsername('');
     setTechs('');
   };
@@ -60,3 +60,5 @@ function DevForm({ onSubmit }) {
         </form>
   );  
 };
+
+export default DevForm;
